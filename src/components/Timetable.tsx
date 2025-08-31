@@ -6,6 +6,7 @@ type TimetableProps = {
   schedule: DaySchedule[];
   showClassrooms?: boolean;
   showBreaks?: boolean;
+  parentsMode?: boolean;
 };
 
 export function Timetable({
@@ -13,6 +14,7 @@ export function Timetable({
   schedule,
   showClassrooms = true,
   showBreaks = true,
+  parentsMode = false,
 }: TimetableProps) {
   return (
     <section className="max-w-5xl mx-auto p-4 sm:p-6">
@@ -36,29 +38,55 @@ export function Timetable({
                 const next = day.lessons[idx + 1];
                 return (
                   <React.Fragment key={`${day.day}-${idx}`}>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-start gap-3">
                       <div className="w-16 shrink-0 text-sm font-medium text-black/70 tabular-nums">
                         {lesson.start}
                         <span className="text-black/40">–</span>
                         {lesson.end}
                       </div>
-                      <div className="flex items-center gap-2 flex-nowrap overflow-hidden w-full min-w-0">
-                        <div
-                          className={`inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm whitespace-nowrap overflow-hidden flex-1 min-w-0 max-w-full ${
-                            lesson.colorClass ?? "bg-gray-100 text-gray-800"
-                          }`}
-                        >
-                          <span aria-hidden>{lesson.icon ?? "📘"}</span>
-                          <span className="font-medium truncate">
-                            {lesson.subject}
-                          </span>
-                        </div>
-                        {showClassrooms && (
-                          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-800 flex-none whitespace-nowrap">
-                            <span aria-hidden>📍</span>
-                            <span className="font-medium">
-                              {lesson.classroom}
+                      <div className="flex-1 min-w-0 space-y-1">
+                        <div className="flex items-center gap-2 flex-nowrap overflow-hidden w-full min-w-0">
+                          <div
+                            className={`inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm whitespace-nowrap overflow-hidden flex-1 min-w-0 max-w-full ${
+                              lesson.colorClass ?? "bg-gray-100 text-gray-800"
+                            }`}
+                          >
+                            <span aria-hidden>{lesson.icon ?? "📘"}</span>
+                            <span className="font-medium truncate">
+                              {lesson.subject}
                             </span>
+                          </div>
+                          {showClassrooms && (
+                            <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-800 flex-none whitespace-nowrap">
+                              <span aria-hidden>📍</span>
+                              <span className="font-medium">
+                                {lesson.classroom}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        {parentsMode && (
+                          <div className="text-xs text-black/70 space-x-2 truncate">
+                            {lesson.teacher && (
+                              <span>
+                                <span className="font-semibold">
+                                  Mokytojas:
+                                </span>{" "}
+                                {lesson.teacher}
+                              </span>
+                            )}
+                            {lesson.group && (
+                              <span>
+                                <span className="font-semibold">Grupė:</span>{" "}
+                                {lesson.group}
+                              </span>
+                            )}
+                            {lesson.comment && (
+                              <span>
+                                <span className="font-semibold">Pastaba:</span>{" "}
+                                {lesson.comment}
+                              </span>
+                            )}
                           </div>
                         )}
                       </div>

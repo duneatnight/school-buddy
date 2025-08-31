@@ -5,6 +5,9 @@ export type Lesson = {
   classroom: string;
   icon?: string;
   colorClass?: string;
+  teacher?: string;
+  group?: string;
+  comment?: string;
 };
 
 export type DaySchedule = {
@@ -32,6 +35,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🗣️",
         colorClass: "bg-gray-100 text-gray-800",
+        teacher: "Danutė Kazlauskienė",
+        comment: "UPT konsultacija",
       },
       {
         start: "08:45",
@@ -40,6 +45,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "📖",
         colorClass: "bg-blue-100 text-blue-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "09:30",
@@ -48,6 +54,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "➗",
         colorClass: "bg-emerald-100 text-emerald-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "10:30",
@@ -56,6 +63,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🌿",
         colorClass: "bg-lime-100 text-lime-800",
+        teacher: "Rima Visackienė",
       },
       {
         start: "11:15",
@@ -64,6 +72,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🎭",
         colorClass: "bg-fuchsia-100 text-fuchsia-800",
+        teacher: "Jelena Malikėnienė",
+        group: "BAL(mer), BAL(ber)",
       },
       {
         start: "12:15",
@@ -72,6 +82,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "BE R11 salė (B8)",
         icon: "🤸",
         colorClass: "bg-orange-100 text-orange-800",
+        teacher: "Svetlana Jasevičienė",
+        group: "BAL(mer), BAL(ber)",
       },
     ],
   },
@@ -85,6 +97,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "B5",
         icon: "🩰",
         colorClass: "bg-pink-100 text-pink-800",
+        teacher: "Žavinta Čičelytė, Yanna Liebiedieva",
+        group: "BAL(mer)",
       },
       {
         start: "09:00",
@@ -93,6 +107,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "📖",
         colorClass: "bg-blue-100 text-blue-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "10:40",
@@ -101,6 +116,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "➗",
         colorClass: "bg-emerald-100 text-emerald-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "11:25",
@@ -109,6 +125,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🎵",
         colorClass: "bg-yellow-100 text-yellow-800",
+        teacher: "Julija Vėželytė-Vilkevičienė",
+        group: "BAL(mer), BAL(ber)",
       },
       {
         start: "12:10",
@@ -117,6 +135,9 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🎼",
         colorClass: "bg-indigo-100 text-indigo-800",
+        teacher: "Loreta Zinkevičienė",
+        comment: "Muzikos teorijos įvadas (mod)",
+        group: "BAL(mer), BAL(ber)",
       },
     ],
   },
@@ -130,6 +151,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "B5",
         icon: "🩰",
         colorClass: "bg-pink-100 text-pink-800",
+        teacher: "Žavinta Čičelytė, Yanna Liebiedieva",
+        group: "BAL(mer)",
       },
       {
         start: "09:00",
@@ -138,6 +161,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "📖",
         colorClass: "bg-blue-100 text-blue-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "10:40",
@@ -146,6 +170,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "BE A2 auditorija 2",
         icon: "🙏",
         colorClass: "bg-purple-100 text-purple-800",
+        teacher: "Simona Bačiulienė",
+        group: "TIK",
       },
       {
         start: "11:25",
@@ -154,6 +180,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "➗",
         colorClass: "bg-emerald-100 text-emerald-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "12:10",
@@ -162,6 +189,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "211 studija",
         icon: "🎶",
         colorClass: "bg-rose-100 text-rose-800",
+        teacher: "Julija Vėželytė-Vilkevičienė",
+        group: "BAL(mer), BAL(ber)",
       },
     ],
   },
@@ -175,6 +204,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "➗",
         colorClass: "bg-emerald-100 text-emerald-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "09:30",
@@ -183,6 +213,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🛠️",
         colorClass: "bg-gray-100 text-gray-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "10:30",
@@ -191,6 +222,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🎨",
         colorClass: "bg-pink-100 text-pink-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "11:15",
@@ -199,6 +231,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🌍",
         colorClass: "bg-cyan-100 text-cyan-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "12:15",
@@ -207,6 +240,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🗣️",
         colorClass: "bg-gray-100 text-gray-800",
+        teacher: "Danutė Kazlauskienė",
+        comment: "UPT konsultacija",
       },
       {
         start: "13:15",
@@ -215,6 +250,8 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "BE R11 salė (B8)",
         icon: "🤸",
         colorClass: "bg-orange-100 text-orange-800",
+        teacher: "Svetlana Jasevičienė",
+        group: "BAL(mer), BAL(ber)",
       },
     ],
   },
@@ -228,6 +265,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "B5",
         icon: "🩰",
         colorClass: "bg-pink-100 text-pink-800",
+        teacher: "Žavinta Čičelytė, Yanna Liebiedieva",
       },
       {
         start: "09:00",
@@ -236,6 +274,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "📖",
         colorClass: "bg-blue-100 text-blue-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "10:40",
@@ -244,6 +283,7 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "D116",
         icon: "🔬",
         colorClass: "bg-lime-100 text-lime-800",
+        teacher: "Danutė Kazlauskienė",
       },
       {
         start: "11:25",
@@ -252,6 +292,9 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "B7",
         icon: "🎭",
         colorClass: "bg-fuchsia-100 text-fuchsia-800",
+        teacher: "Giedrė Zaščižinskaitė-Keblienė, Agnė Jurkūnienė",
+        comment: "Susipažinimas. Mokymo plano aptarimas.",
+        group: "BAL(mer), BAL(ber)",
       },
       {
         start: "12:10",
@@ -260,6 +303,9 @@ export const firstGradeTimetable: DaySchedule[] = [
         classroom: "109 auditorija",
         icon: "🎹",
         colorClass: "bg-amber-100 text-amber-800",
+        teacher: "Agnė Jurkūnienė",
+        comment: "Šokio akompanavimas",
+        group: "Seminaras 83",
       },
     ],
   },

@@ -8,11 +8,15 @@ export function ControlBox({
   onToggleClassrooms,
   showBreaks,
   onToggleBreaks,
+  parentsMode,
+  onToggleParentsMode,
 }: {
   showClassrooms: boolean;
   onToggleClassrooms: () => void;
   showBreaks: boolean;
   onToggleBreaks: () => void;
+  parentsMode: boolean;
+  onToggleParentsMode: () => void;
 }) {
   return (
     <div className="fixed inset-x-0 bottom-4 flex justify-center pointer-events-none print:hidden">
@@ -34,6 +38,15 @@ export function ControlBox({
         >
           <span aria-hidden>🍎</span>
           <span>{showBreaks ? "Hide breaks" : "Show breaks"}</span>
+        </button>
+        <button
+          type="button"
+          onClick={onToggleParentsMode}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-black/10 bg-white hover:bg-gray-50 text-sm"
+          aria-pressed={parentsMode}
+        >
+          <span aria-hidden>👪</span>
+          <span>{parentsMode ? "Parents view: ON" : "Parents view: OFF"}</span>
         </button>
         <PrintButton />
       </div>

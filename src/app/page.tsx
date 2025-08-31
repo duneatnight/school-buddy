@@ -8,6 +8,7 @@ import { firstGradeTimetable, uiText } from "../data/timetable";
 export default function Home() {
   const [showClassrooms, setShowClassrooms] = useState<boolean>(true);
   const [showBreaks, setShowBreaks] = useState<boolean>(true);
+  const [parentsMode, setParentsMode] = useState<boolean>(false);
 
   return (
     <>
@@ -16,12 +17,15 @@ export default function Home() {
         schedule={firstGradeTimetable}
         showClassrooms={showClassrooms}
         showBreaks={showBreaks}
+        parentsMode={parentsMode}
       />
       <ControlBox
         showClassrooms={showClassrooms}
         onToggleClassrooms={() => setShowClassrooms((v) => !v)}
         showBreaks={showBreaks}
         onToggleBreaks={() => setShowBreaks((v) => !v)}
+        parentsMode={parentsMode}
+        onToggleParentsMode={() => setParentsMode((v) => !v)}
       />
     </>
   );
